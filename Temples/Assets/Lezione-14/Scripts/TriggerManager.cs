@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace L13.RispoliFederico
 {
-    public enum Trigger { arrow, treasure }
+    public enum Trigger { arrow, treasure, arrowexit}
     public class TriggerManager : MonoBehaviour
     {
         public Trigger trigger;
         public SpawnManager SpawnArrow;
         public GameObject Wall;
         public GameObject Treasure;
+        public timer Timer;
         MovePlayer MovePlayer;
         public Camera camera;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -33,11 +35,13 @@ namespace L13.RispoliFederico
                         SpawnArrow.Spawn();
                         break;
                     case Trigger.treasure:
-                        Destroy(Wall);
-                        Destroy(Treasure);
+                        Wall.SetActive(false);
+                        Treasure.SetActive(false);
                         Quaternion rotate = new Quaternion(0, 180, 0,1);
                         camera.gameObject.transform.rotation = rotate;
                         MovePlayer.isRotating = true;
+                        StartCoroutine(Timer.StartTimer());
+
                         break;
                     default:
                         break;
