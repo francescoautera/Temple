@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6527873457471530722}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +110,4 @@ MonoBehaviour:
   rad: 0
   bouncex: 0
   bouncey: 0
+  xrange: 10

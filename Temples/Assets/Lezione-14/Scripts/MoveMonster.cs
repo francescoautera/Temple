@@ -12,26 +12,31 @@ namespace L13.RispoliFederico
         [SerializeField] int xrange = 10;
         int direction;
         private int changedir = 1;
+        bool stopmove;
         // Start is called before the first frame update
         void Start()
         {
             direction=Direction();
+            stopmove = false;
         }
 
         // Update is called once per frame
         void Update()
         {
-            x++;
-            if (x > 180)
+            if (!stopmove)
             {
-                x = 0;
-                changedir = -changedir;
+                x++;
+                if (x > 180)
+                {
+                    x = 0;
+                    changedir = -changedir;
+                }
+                rad = Mathf.Deg2Rad * x;
+                bouncey = (Mathf.Cos(rad));
+                bouncex = (Mathf.Sin(rad)) * changedir;
+
+                transform.position += new Vector3(bouncex * xrange * direction, -bouncey, 0) * Time.deltaTime;
             }
-            rad = Mathf.Deg2Rad * x;
-            bouncey = (Mathf.Cos(rad));
-            bouncex = (Mathf.Sin(rad)) * changedir;
-            
-            transform.position += new Vector3(bouncex*xrange*direction, -bouncey, 0) * Time.deltaTime;
 
         }
 
@@ -46,6 +51,11 @@ namespace L13.RispoliFederico
             }
             return dir;
         }
-      
+        public void StopMove()
+        {
+            stopmove = !stopmove;
+        }
+
     }
+    
 }

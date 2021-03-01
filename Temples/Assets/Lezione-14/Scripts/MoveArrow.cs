@@ -9,15 +9,18 @@ namespace L13.RispoliFederico
         public Vector3 posPlayer;
         [SerializeField]float velocity=10f;
         Vector3 move;
+        bool stopmove;
         // Start is called before the first frame update
         void Start()
         {
+            stopmove = false;
             move= GetDirection();
         }
 
         // Update is called once per frame
         void Update()
         {
+            if(!stopmove)
             transform.position += move * Time.deltaTime * velocity;
         }
 
@@ -32,7 +35,13 @@ namespace L13.RispoliFederico
             }
             return pos;
         }
+
+        public void StopMove()
+        {
+            stopmove = !stopmove;
+        }
     }
 
+   
     
 }

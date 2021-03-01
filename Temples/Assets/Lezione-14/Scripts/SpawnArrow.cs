@@ -10,6 +10,7 @@ namespace L13.RispoliFederico
         public GameObject arrow;
         public GameObject Wall;
         public MovePlayer Player;
+        public ArrowManager manager;
         [SerializeField] private float timer;
         [SerializeField] private float globaltimer=3f;
 
@@ -33,7 +34,7 @@ namespace L13.RispoliFederico
        public void Spawn() {
 
             Vector3 pos = new Vector3(Wall.transform.position.x,Player.transform.position.y, Wall.transform.position.z);
-            var instanciate = Instantiate(arrow, pos, Quaternion.identity);
+            var instanciate = Instantiate(arrow, pos, Quaternion.identity,manager.transform);
             var comp = instanciate.GetComponent<MoveArrow>();
             comp.posPlayer = Player.transform.position;
 

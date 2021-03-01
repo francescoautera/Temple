@@ -2,35 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-namespace L13.RispoliFederico{ 
-public class timer : MonoBehaviour
+namespace L13.RispoliFederico
 {
-     public Text text;
-     [SerializeField] float time=20f;
-    // Start is called before the first frame update
-    void Start()
+    public class timer : MonoBehaviour
     {
-      text.text = "Timer:" + time;
-      text.gameObject.SetActive(false);
-    }
+        public Text text;
+        [SerializeField] float time = 20f;
+        bool stoptimer;
+        // Start is called before the first frame update
+        void Start()
+        {
+            text.text = "Timer:" + time;
+            text.gameObject.SetActive(false);
+            stoptimer = false;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Update is called once per frame
+        void Update()
+        {
 
-        public IEnumerator  StartTimer()
+        }
+
+        public IEnumerator StartTimer()
         {
             text.gameObject.SetActive(true);
-            while (time > 0)
+
+            while (time > 0 && !stoptimer)
             {
                 time -= Time.deltaTime;
                 text.text = "Timer:" + time;
                 yield return null;
             }
-           
 
-    }   
-}
+
+        }
+
+        public void StopTimer() {
+            stoptimer = !stoptimer;
+        }
+    }
 }

@@ -64,7 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Lezione-14\Scripts\ArrowManager.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Lezione-14\Scripts\MonsterManager.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\MoveArrow.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\MoveMonster.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\MovePlayer.cs" />

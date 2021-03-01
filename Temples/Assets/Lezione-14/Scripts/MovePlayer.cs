@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 namespace L13.RispoliFederico
 {
     public class MovePlayer : MonoBehaviour
@@ -9,11 +10,12 @@ namespace L13.RispoliFederico
         public bool isRotating;
         Vector3 dir;
         [SerializeField] float velocity = 10f;
+        private bool GodMode;
 
         // Start is called before the first frame update
         void Start()
         {
-
+            GodMode = false;
         }
 
         // Update is called once per frame
@@ -51,6 +53,20 @@ namespace L13.RispoliFederico
             }
             
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Enemy")&&!GodMode) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
+            }
+        }
+
+        public void God() {
+            GodMode = !GodMode;
+        }
     }
+
+   
 
 }
