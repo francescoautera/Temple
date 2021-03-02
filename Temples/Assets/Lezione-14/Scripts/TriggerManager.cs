@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace L13.RispoliFederico
 {
-    public enum Trigger { arrow, treasure, arrowexit}
+    public enum Trigger { arrow, treasure, exit}
     public class TriggerManager : MonoBehaviour
     {
         public Trigger trigger;
@@ -11,13 +11,14 @@ namespace L13.RispoliFederico
         public GameObject Wall;
         public GameObject Treasure;
         public timer Timer;
-        MovePlayer MovePlayer;
+        public MovePlayer MovePlayer;
+        public MovePlayer MovePlayercamera;
         public Camera camera;
         
         // Start is called before the first frame update
         void Start()
         {
-            MovePlayer = FindObjectOfType<MovePlayer>();
+           
         }
 
         // Update is called once per frame
@@ -40,9 +41,11 @@ namespace L13.RispoliFederico
                         Quaternion rotate = new Quaternion(0, 180, 0,1);
                         camera.gameObject.transform.rotation = rotate;
                         MovePlayer.isRotating = true;
+                        MovePlayercamera.isRotating = true;
                         StartCoroutine(Timer.StartTimer());
 
                         break;
+                    
                     default:
                         break;
                 }

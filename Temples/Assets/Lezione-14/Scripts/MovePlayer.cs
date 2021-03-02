@@ -10,7 +10,7 @@ namespace L13.RispoliFederico
         public bool isRotating;
         Vector3 dir;
         [SerializeField] float velocity = 10f;
-        private bool GodMode;
+        [SerializeField]private bool GodMode;
 
         // Start is called before the first frame update
         void Start()
@@ -59,6 +59,10 @@ namespace L13.RispoliFederico
             if (other.CompareTag("Enemy")&&!GodMode) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
+            }
+            if (other.CompareTag("Finish")) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
             }
         }
 

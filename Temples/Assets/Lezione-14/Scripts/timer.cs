@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 namespace L13.RispoliFederico
 {
     public class timer : MonoBehaviour
@@ -33,8 +34,9 @@ namespace L13.RispoliFederico
                 text.text = "Timer:" + time;
                 yield return null;
             }
-
-
+            if (time < 0) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
 
         public void StopTimer() {

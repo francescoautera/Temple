@@ -18,6 +18,9 @@ namespace L13.RispoliFederico
             
         }
 
-
+        public void OnApplicationQuit()
+        {
+            Application.Quit();
+        }
     }
 }
