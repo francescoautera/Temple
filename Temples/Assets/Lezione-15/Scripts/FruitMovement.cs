@@ -7,7 +7,7 @@ namespace L15.Fruit
     {
 
         private int mid = 0;
-        [SerializeField] public float vel = 2f;
+        [SerializeField] public float vel;
         [SerializeField] public float gravity = 1f;
         Vector3 vect;
 
@@ -15,11 +15,11 @@ namespace L15.Fruit
         {
             if (gameObject.transform.position.x >= mid)
             {
-                vect = new Vector3(-vel, gravity);
+                vect = new Vector3(-vel, -gravity);
             }
             else
             {
-                vect = new Vector3(vel, 0);
+                vect = new Vector3(vel, -gravity);
             }
         }
 

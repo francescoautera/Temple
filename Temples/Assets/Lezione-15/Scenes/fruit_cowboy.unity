@@ -239,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614786969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800745400}
@@ -324,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625941856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.2}
+  m_LocalPosition: {x: 0, y: 0, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831908372}
@@ -340,6 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800745400}
+  - component: {fileID: 800745401}
   m_Layer: 0
   m_Name: SpawnManagerDx
   m_TagString: Untagged
@@ -355,12 +356,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800745399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.1, y: 30.7, z: 0}
+  m_LocalPosition: {x: 76.1, y: 30.7, z: 24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614786970}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800745401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800745399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8e51814fc0fd44b8f8df4b56f14d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watermelon: {fileID: 2185756735327494302, guid: 4ae80ebe15964ae4da479e3729d1a117,
+    type: 3}
+  candy: {fileID: 4964544514613677444, guid: 75a706a2059d4f7438cdebb3389015f9, type: 3}
+  orange: {fileID: 2218124081171805215, guid: d75e9bbd551f4cb4fb686528d6fe0046, type: 3}
+  timer: 0
 --- !u!1 &831908371
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,11 +559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  velocity: 0
+  velocity: 2
   event1: 0
   event2: 0
   event3: 0
-  spawnTimer: 0
+  spawnTimer: 2
 --- !u!1 &1649003621
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1649003622}
+  - component: {fileID: 1649003623}
   m_Layer: 0
   m_Name: SpawnManagerSx
   m_TagString: Untagged
@@ -570,9 +589,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649003621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.3, y: 30, z: 0}
+  m_LocalPosition: {x: -62.3, y: 30, z: 24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614786970}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649003623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649003621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8e51814fc0fd44b8f8df4b56f14d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watermelon: {fileID: 2185756735327494302, guid: 4ae80ebe15964ae4da479e3729d1a117,
+    type: 3}
+  candy: {fileID: 4964544514613677444, guid: 75a706a2059d4f7438cdebb3389015f9, type: 3}
+  orange: {fileID: 2218124081171805215, guid: d75e9bbd551f4cb4fb686528d6fe0046, type: 3}
+  timer: 0
