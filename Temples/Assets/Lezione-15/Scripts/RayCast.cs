@@ -6,10 +6,9 @@ namespace L15.Fruit
 {
     public class RayCast : MonoBehaviour
     {
-        [SerializeField] public GameObject projectile;
+       
         [SerializeField] public float range;
-        GameObject target;
-        public Transform spawnPoint;
+        
 
         // Start is called before the first frame update
         void Start()

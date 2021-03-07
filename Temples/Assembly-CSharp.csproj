@@ -77,8 +77,9 @@
     <Compile Include="Assets\Lezione-14\Scripts\ToggleLight.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\TriggerManager.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\timer.cs" />
-    <Compile Include="Assets\Lezione-15\RayCast.cs" />
+    <Compile Include="Assets\Lezione-15\Scripts\FruitMovement.cs" />
     <Compile Include="Assets\Lezione-15\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Lezione-15\Scripts\RayCast.cs" />
     <Compile Include="Assets\Lezione-15\Scripts\SpawnManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.16f1/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
