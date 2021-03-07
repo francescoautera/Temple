@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Lezione-15/Scenes/fruit_cowboy.unity
+    guid: 77ba6ed11ba234542b0f349c57fceb0a
   m_configObjects: {}
