@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dea68a7cc1079d34fb504bae197fcee3, type: 2}
+  - {fileID: 2100000, guid: 5e4b5400f390e31478b86433bbe40a90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,8 +209,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265283888}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: -43, z: 90}
-  m_LocalScale: {x: 35.362, y: 1, z: 22.02507}
+  m_LocalPosition: {x: -8, y: -20, z: 90}
+  m_LocalScale: {x: 38, y: 1, z: 22}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -254,7 +254,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507703244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -481,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625941856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -31}
+  m_LocalPosition: {x: 0, y: 0, z: -59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831908372}
@@ -527,7 +527,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716505834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -624,10 +624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e51814fc0fd44b8f8df4b56f14d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  watermelon: {fileID: 2185756735327494302, guid: 4ae80ebe15964ae4da479e3729d1a117,
-    type: 3}
-  candy: {fileID: 4964544514613677444, guid: 75a706a2059d4f7438cdebb3389015f9, type: 3}
-  orange: {fileID: 2218124081171805215, guid: d75e9bbd551f4cb4fb686528d6fe0046, type: 3}
+  watermelon: {fileID: 1125202155953082, guid: 573bb482e4baeec4386587db7cc07515, type: 3}
+  candy: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
+  orange: {fileID: 1369001872449898, guid: 2f2e54b9f3898eb46a0b47f9a4d4c52b, type: 3}
   WallUp: {fileID: 507703244}
   WallDown: {fileID: 716505834}
   timer: 0
@@ -675,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sight: {fileID: 2800000, guid: d59f158d902389043a1236e952906a5e, type: 3}
-  range: 200
+  range: 10000
 --- !u!1 &1188851648
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +803,7 @@ GameObject:
   - component: {fileID: 1402308579}
   - component: {fileID: 1402308578}
   - component: {fileID: 1402308582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -1152,10 +1151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e51814fc0fd44b8f8df4b56f14d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  watermelon: {fileID: 2185756735327494302, guid: 4ae80ebe15964ae4da479e3729d1a117,
-    type: 3}
-  candy: {fileID: 4964544514613677444, guid: 75a706a2059d4f7438cdebb3389015f9, type: 3}
-  orange: {fileID: 2218124081171805215, guid: d75e9bbd551f4cb4fb686528d6fe0046, type: 3}
+  watermelon: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
+  candy: {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
+  orange: {fileID: 1638444836145330, guid: 031f4f4b1f7d8b7489da0919e18ceac3, type: 3}
   WallUp: {fileID: 507703244}
   WallDown: {fileID: 716505834}
   timer: 0
@@ -1209,7 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1287,7 +1285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1328,7 +1326,7 @@ GameObject:
   - component: {fileID: 2132375034}
   - component: {fileID: 2132375033}
   - component: {fileID: 2132375037}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Finish
   m_Icon: {fileID: 0}
