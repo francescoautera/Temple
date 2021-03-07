@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private bool isDone2;
     private bool isDone3;
     public  int points;
+    private bool timerStop;
 
         
      // Start is called before the first frame update
@@ -29,35 +30,39 @@ public class GameManager : MonoBehaviour
             isDone2=false;
             isDone3=false;
             points = 0;
-           
+            timerStop = false;
     }
 
         // Update is called once per frame
         void Update()
         {
-            timer -= Time.deltaTime;
-            if (timer < event1 && !isDone1)
+            if (!timerStop)
             {
-                IncreaseVelocity();
-                IncreaseSpawn();
-                isDone1 = true;
-            }
-            else if (timer < event2 && !isDone2)
-            {
-                IncreaseSpawn();
-                isDone2 = true;
-            }
-            else if (timer < event3 && !isDone3)
-            {
-                IncreaseVelocity();
-                isDone3 = true;
-            }
-            else if (timer < 0) {
-               SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                timer -= Time.deltaTime;
+                if (timer < event1 && !isDone1)
+                {
+                    IncreaseVelocity();
+                    IncreaseSpawn();
+                    isDone1 = true;
+                }
+                else if (timer < event2 && !isDone2)
+                {
+                    IncreaseSpawn();
+                    isDone2 = true;
+                }
+                else if (timer < event3 && !isDone3)
+                {
+                    IncreaseVelocity();
+                    isDone3 = true;
+                }
+                else if (timer < 0)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
     }
 
-        private void IncreaseVelocity() {
+        public void IncreaseVelocity() {
             velocity += 10;
         }
 
@@ -65,5 +70,12 @@ public class GameManager : MonoBehaviour
             spawnTimer -= 0.3f;
         }
 
+        public void StopTimer() {
+            timerStop = !timerStop;
+        }
+
+        public void DecreaseVelocity() {
+            velocity -= 10;
+        }
 }
 }
