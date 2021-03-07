@@ -404,9 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7a89e35ecb33d4eab79a61f2e07456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  range: 0
-  spawnPoint: {fileID: 0}
+  range: 100
 --- !u!1 &1410389155
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +545,7 @@ MonoBehaviour:
   event1: 0
   event2: 0
   event3: 0
-  points: 0
+  spawnTimer: 0
 --- !u!1 &1649003621
 GameObject:
   m_ObjectHideFlags: 0
