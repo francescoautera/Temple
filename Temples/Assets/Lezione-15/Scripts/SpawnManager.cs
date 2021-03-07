@@ -27,15 +27,18 @@ public class SpawnManager : MonoBehaviour
                 {
                     case 0:
                         var instanciate=Instantiate(watermelon,transform.position,Quaternion.identity,transform);
-                        // var comp= instanciate.Getcomponent<FruitMove>();
-                        //comp.velocity=manager.velocity;
+                        var component= instanciate.GetComponent<FruitMovement>();
+                        component.vel=manager.velocity;
                         break;
                     case 1:
                         var inst=Instantiate(candy, transform.position, Quaternion.identity, transform);
-                       
+                        var comp = inst.GetComponent<FruitMovement>();
+                        comp.vel = manager.velocity;
                         break;
                     case 2:
                         var inst2= Instantiate(orange, transform.position, Quaternion.identity, transform);
+                        var comp2 = inst2.GetComponent<FruitMovement>();
+                        comp2.vel = manager.velocity;
                         break;
                     default:
                         break;
