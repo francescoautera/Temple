@@ -78,6 +78,7 @@
     <Compile Include="Assets\Lezione-14\Scripts\TriggerManager.cs" />
     <Compile Include="Assets\Lezione-14\Scripts\timer.cs" />
     <Compile Include="Assets\Lezione-15\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Lezione-15\Scripts\SpawnManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -7,14 +7,15 @@ namespace L15.Fruit {
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float timer;
-    [SerializeField] float velocity;
+    public float velocity;
     [SerializeField] float event1; 
     [SerializeField] float event2;    
     [SerializeField] float event3;
+    public float spawnTimer; 
     private bool isDone1;
     private bool isDone2;
     private bool isDone3;
-    public int points;
+    public  static int points;
 
         
      // Start is called before the first frame update
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
             isDone2=false;
             isDone3=false;
             points = 0;
-
+            spawnTimer = 2f;
     }
 
         // Update is called once per frame
@@ -61,8 +62,8 @@ public class GameManager : MonoBehaviour
             velocity += 2;
         }
 
-        private void IncreaseSpawn() { 
-            
+        private void IncreaseSpawn() {
+            spawnTimer -= 0.3f;
         }
 
 }
