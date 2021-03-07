@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 namespace L15.Fruit { 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] float timer;
+    public float timer;
     public float velocity;
     [SerializeField] float event1; 
     [SerializeField] float event2;    
@@ -15,14 +15,13 @@ public class GameManager : MonoBehaviour
     private bool isDone1;
     private bool isDone2;
     private bool isDone3;
-    public  static int points;
+    public  int points;
 
         
      // Start is called before the first frame update
     void Start()
     {
             timer=60f;
-            velocity = 2f;
             event1 = 30f;
             event2 = 15f;
             event3 = 5f;
@@ -30,7 +29,7 @@ public class GameManager : MonoBehaviour
             isDone2=false;
             isDone3=false;
             points = 0;
-            spawnTimer = 2f;
+           
     }
 
         // Update is called once per frame
@@ -59,7 +58,7 @@ public class GameManager : MonoBehaviour
     }
 
         private void IncreaseVelocity() {
-            velocity += 2;
+            velocity += 10;
         }
 
         private void IncreaseSpawn() {

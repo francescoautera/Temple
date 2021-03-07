@@ -8,12 +8,13 @@ namespace L15.Fruit
     {
        
         [SerializeField] public float range;
+        GameManager manager;
         
 
         // Start is called before the first frame update
         void Start()
         {
-            range = 100f;
+            manager = FindObjectOfType<GameManager>();
         }
 
         // Update is called once per frame
@@ -32,9 +33,10 @@ namespace L15.Fruit
 
                 layerMask = ~layerMask;
 
-                if (Physics.Raycast(pos,out hit, range, layerMask));
+                if (Physics.Raycast(pos,out hit, range, layerMask))
                 {               
                     Destroy(hit.collider.gameObject);
+                    manager.points += 100;
                 }
             }
         }

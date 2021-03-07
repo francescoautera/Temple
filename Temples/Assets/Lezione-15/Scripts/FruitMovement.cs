@@ -27,5 +27,12 @@ namespace L15.Fruit
         {
             transform.position += vect * Time.deltaTime;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Finish")) {
+                Destroy(gameObject);
+            }
+        }
     }
 }
