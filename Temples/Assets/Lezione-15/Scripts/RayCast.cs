@@ -6,7 +6,7 @@ namespace L15.Fruit
 {
     public class RayCast : MonoBehaviour
     {
-       
+        public Texture2D sight;
         [SerializeField] public float range;
         GameManager manager;
         
@@ -15,6 +15,7 @@ namespace L15.Fruit
         void Start()
         {
             manager = FindObjectOfType<GameManager>();
+            Cursor.SetCursor(sight,Vector2.zero,CursorMode.ForceSoftware);
         }
 
         // Update is called once per frame
