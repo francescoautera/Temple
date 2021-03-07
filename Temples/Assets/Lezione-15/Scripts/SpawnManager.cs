@@ -9,13 +9,12 @@ public class SpawnManager : MonoBehaviour
         public GameObject watermelon;
         public GameObject candy;
         public GameObject orange;
-        float timer;
+        [SerializeField] float timer;
     // Start is called before the first frame update
     void Start()
     {
        manager = FindObjectOfType<GameManager>();
        timer = manager.spawnTimer;
-
     }
 
     // Update is called once per frame
@@ -27,19 +26,22 @@ public class SpawnManager : MonoBehaviour
                 switch (x)
                 {
                     case 0:
-                        Instantiate(watermelon,transform.position,Quaternion.identity,transform);
+                        var instanciate=Instantiate(watermelon,transform.position,Quaternion.identity,transform);
+                        // var comp= instanciate.Getcomponent<FruitMove>();
+                        //comp.velocity=manager.velocity;
                         break;
                     case 1:
-                        Instantiate(candy, transform.position, Quaternion.identity, transform);
+                        var inst=Instantiate(candy, transform.position, Quaternion.identity, transform);
+                       
                         break;
                     case 2:
-                        Instantiate(orange, transform.position, Quaternion.identity, transform);
+                        var inst2= Instantiate(orange, transform.position, Quaternion.identity, transform);
                         break;
                     default:
                         break;
 
-                }      
-            
+                }
+                timer = manager.spawnTimer;
        } 
     }
 }
